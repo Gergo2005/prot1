@@ -1,0 +1,207 @@
+/* Alapstílusok */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#street-view {
+    width: 100%;
+    height: 50vh;
+    border: 2px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+#map-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* A tartalom középre igazítása */
+    align-items: center; /* A tartalom középre igazítása */
+    margin-bottom: 1rem;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+}
+
+/* 🔒 Utcanevek eltüntetése a Street View aljáról */
+.gm-style .gm-iv-address {
+    display: none !important;
+}
+
+#score-summary {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ffffffcc;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Menü */
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+button.round-choice {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animáció hozzáadása */
+}
+
+button.round-choice:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Kisebb animáció a kattintásra */
+}
+
+button.round-choice:active {
+    background-color: #388E3C;
+}
+
+
+/* Helyszínválasztó gombok */
+.location-choice {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animáció hozzáadása */
+}
+
+.location-choice:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Kisebb animáció a kattintásra */
+}
+
+.location-choice:active {
+    background-color: #388E3C;
+}
+
+/* Kiválasztott helyszín kiemelése */
+.location-choice.selected {
+    background-color: #388E3C;
+    color: white;
+    font-weight: bold;
+}
+
+/* A gombok közötti térköz */
+#menu .location-choice {
+    margin-top: 15px;
+}
+
+/* A térkép konténerének középre igazítása */
+#map-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* A tartalom középre igazítása */
+    align-items: center; /* A tartalom középre igazítása */
+    margin: 0 auto; /* Középre igazítás */
+    text-align: center; /* Középre igazítja a gombot is */
+    margin-bottom: 1rem;
+}
+
+/* Tipp leadása gomb középre igazítása */
+#submit-guess {
+    display: block;
+    margin: 1rem auto; /* A gomb középre igazítása */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Menü */
+button.round-choice {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animáció hozzáadása */
+}
+
+button.round-choice:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Kisebb animáció a kattintásra */
+}
+
+button.round-choice:active {
+    background-color: #388E3C;
+}
+
+/* Kiválasztott gombok stílusa */
+button.round-choice.selected {
+    background-color: #45a049;
+    transform: scale(1.05); /* Animáció a kiválasztott gombhoz */
+}
